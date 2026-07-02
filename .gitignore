@@ -1,0 +1,16 @@
+/.idea/
+
+
+# dependencies
+node_modules/
+
+# Quartz generated / local files
+.quartz/
+.quartz-cache/
+public/
+
+# 如果你是“笔记仓库单独存在，构建时临时拉取到 content”
+content/
+
+# macOS
+.DS_Store
