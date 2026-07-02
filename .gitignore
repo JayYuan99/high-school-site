@@ -8,9 +8,6 @@ node_modules/
 .quartz/
 .quartz-cache/
 public/
-content
-# 如果你是“笔记仓库单独存在，构建时临时拉取到 content”
-content/
 
 # macOS
 .DS_Store
