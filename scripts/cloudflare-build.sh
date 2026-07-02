@@ -46,24 +46,26 @@ fi
 
 mkdir -p "$CONTENT_DIR"
 
-echo "==> Sync notes into Quartz content/"
+echo "==> Copy notes into Quartz content/"
 echo "==> Source: $SRC_DIR"
 echo "==> Target: $CONTENT_DIR"
 
-rsync -av --delete \
-  --exclude='.git/' \
-  --exclude='.github/' \
-  --exclude='.obsidian/' \
-  --exclude='.trash/' \
-  --exclude='.DS_Store' \
-  --exclude='.claude/' \
-  --exclude='.claudian/' \
-  --exclude='node_modules/' \
-  --exclude='public/' \
-  --exclude='.quartz/' \
-  --exclude='.quartz-cache/' \
-  --exclude='private/' \
-  "$SRC_DIR"/ "$CONTENT_DIR"/
+cp -R "$SRC_DIR"/. "$CONTENT_DIR"/
+
+echo "==> Clean ignored files from content/"
+
+rm -rf "$CONTENT_DIR/.git"
+rm -rf "$CONTENT_DIR/.github"
+rm -rf "$CONTENT_DIR/.obsidian"
+rm -rf "$CONTENT_DIR/.trash"
+rm -rf "$CONTENT_DIR/.DS_Store"
+rm -rf "$CONTENT_DIR/.claude"
+rm -rf "$CONTENT_DIR/.claudian"
+rm -rf "$CONTENT_DIR/node_modules"
+rm -rf "$CONTENT_DIR/public"
+rm -rf "$CONTENT_DIR/.quartz"
+rm -rf "$CONTENT_DIR/.quartz-cache"
+rm -rf "$CONTENT_DIR/private"
 
 rm -rf "$TMP_DIR"
 
