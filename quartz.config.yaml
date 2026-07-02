@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: JayYuan99.github.io/high_school
+  baseUrl: high-school-site.pages.dev
   ignorePatterns:
     - private
     - templates
