@@ -33,7 +33,7 @@ export default {
       title: "Reader mode",
     },
     explorer: {
-      title: "Explorer",
+      title: "知识导航",
     },
     footer: {
       createdWith: "Created with",
